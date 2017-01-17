@@ -1,5 +1,6 @@
 package com.develogical;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,11 +10,20 @@ public class RecentItems {
     private List<String> listItems = new ArrayList<String>();
 
     boolean isEmpty(){
-        return true;
+        return listItems.isEmpty();
     }
 
-    public void add(String str){
-        listItems.add(str);
-       // System.out.println(str);
+    public int size() {
+        return listItems.size();
+    }
+
+    public void add(String str) {
+
+                listItems.remove(str);
+                listItems.add(0, str);
+
+    }
+    public String retrieve (Integer i){
+        return listItems.get(i);
     }
 }
