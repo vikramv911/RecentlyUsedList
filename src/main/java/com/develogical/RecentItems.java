@@ -24,6 +24,10 @@ public class RecentItems {
 
     }
     public String retrieve (Integer i){
-        return listItems.get(i);
+        if (i <= listItems.size()-1 ){
+            return listItems.get(i);
+        }
+            return "Invalid list index";
+
     }
 }

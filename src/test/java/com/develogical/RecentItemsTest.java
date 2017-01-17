@@ -25,6 +25,7 @@ public class RecentItemsTest {
         String expected = "test";
         recentItems.add("test");
         assertEquals(expected,recentItems.retrieve(0));
+        assertEquals("Invalid list index",recentItems.retrieve(1));
     }
 
 
