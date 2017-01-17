@@ -10,4 +10,5 @@ public class ExampleTest {
 	public void canAnswerTheUniversalQuestion() {
 		assertThat(new Example().answer(), is(42));
 	}
+
 }
